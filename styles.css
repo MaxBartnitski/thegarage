@@ -38,7 +38,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     opacity: 0.25;
     filter: grayscale(20%);
 }
@@ -232,7 +232,8 @@ body {
     }
 
     .hero-car {
-        opacity: 0.2;
+        opacity: 0.22;
+        object-position: 60% center;
     }
 }
 
@@ -271,7 +272,9 @@ body {
     }
 
     .hero-car {
-        opacity: 0.15;
+        opacity: 0.18;
+        object-position: 65% center;
+        transform: scale(1.2);
     }
 }
 
