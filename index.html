@@ -3,77 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Garage - Coming Soon</title>
-    <meta name="description" content="The Garage - Platform for car enthusiasts coming soon">
+    <title>The Garage - Your Digital Automotive Hub</title>
+    <meta name="description" content="The Garage - Build your collection, explore other garages, watch car videos, and connect with car enthusiasts">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background">
-        <div class="car-silhouette"></div>
-        <div class="grid-overlay"></div>
+        <div class="car-silhouettes">
+            <!-- Multiple car silhouettes for garage effect -->
+            <svg class="car-svg car-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20,60 L30,45 L50,45 L60,35 L100,35 L115,45 L160,45 L170,60 L160,60 L160,70 Q155,75 145,75 Q135,75 130,70 L130,60 L70,60 L70,70 Q65,75 55,75 Q45,75 40,70 L40,60 Z" fill="currentColor" opacity="0.15"/>
+                <circle cx="55" cy="75" r="8" fill="currentColor" opacity="0.15"/>
+                <circle cx="145" cy="75" r="8" fill="currentColor" opacity="0.15"/>
+            </svg>
+            <svg class="car-svg car-2" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25,55 L35,40 L55,40 L65,30 L105,30 L120,40 L165,40 L175,55 L165,55 L165,65 Q160,70 150,70 Q140,70 135,65 L135,55 L75,55 L75,65 Q70,70 60,70 Q50,70 45,65 L45,55 Z" fill="currentColor" opacity="0.12"/>
+                <circle cx="60" cy="70" r="7" fill="currentColor" opacity="0.12"/>
+                <circle cx="150" cy="70" r="7" fill="currentColor" opacity="0.12"/>
+            </svg>
+            <svg class="car-svg car-3" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15,65 L25,50 L45,50 L55,40 L95,40 L110,50 L155,50 L165,65 L155,65 L155,75 Q150,80 140,80 Q130,80 125,75 L125,65 L65,65 L65,75 Q60,80 50,80 Q40,80 35,75 L35,65 Z" fill="currentColor" opacity="0.1"/>
+                <circle cx="50" cy="80" r="7" fill="currentColor" opacity="0.1"/>
+                <circle cx="140" cy="80" r="7" fill="currentColor" opacity="0.1"/>
+            </svg>
+        </div>
     </div>
 
     <div class="container">
         <div class="content">
             <div class="logo-section">
-                <div class="logo-wrapper">
-                    <div class="hex-border">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" />
-                        </svg>
-                    </div>
-                    <h1 class="logo">THE<br><span class="logo-garage">GARAGE</span></h1>
-                </div>
+                <h1 class="logo">THE GARAGE</h1>
+                <div class="logo-underline"></div>
             </div>
 
             <div class="tagline">
-                <p class="subtitle">Where Passion Meets Performance</p>
+                <p class="subtitle">Your Digital Automotive Hub</p>
             </div>
 
-            <div class="car-icons">
-                <div class="icon-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 17h14v-5H5v5z"/>
-                        <path d="M5 17H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"/>
-                        <circle cx="7" cy="20" r="2"/>
-                        <circle cx="17" cy="20" r="2"/>
-                        <path d="M5 12V6l4-4h6l4 4v6"/>
-                    </svg>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <span>Build Your Collection</span>
                 </div>
-                <div class="icon-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
-                    </svg>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <span>Explore Garages</span>
                 </div>
-                <div class="icon-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="6"/>
-                        <circle cx="12" cy="12" r="2"/>
-                    </svg>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                    </div>
+                    <span>Watch & Share</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <span>Buy & Sell</span>
                 </div>
             </div>
 
-            <div class="message">
-                <h2 class="coming-soon">COMING SOON</h2>
-                <p class="description">Your ultimate destination for automotive excellence</p>
+            <div class="description-section">
+                <p class="description">A centralized platform for car enthusiasts. Showcase your vehicles, discover unique collections, connect with owners, and find your next dream car.</p>
             </div>
 
-            <div class="contact">
-                <p class="contact-label">Questions?</p>
+            <div class="cta-section">
+                <div class="status-badge">Coming Soon</div>
+                <p class="contact-text">Interested in early access?</p>
                 <a href="mailto:info@thecargarage.co" class="email-link">info@thecargarage.co</a>
             </div>
-        </div>
-
-        <div class="glow-lines">
-            <div class="glow-line line-1"></div>
-            <div class="glow-line line-2"></div>
-            <div class="glow-line line-3"></div>
         </div>
     </div>
 </body>
