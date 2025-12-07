@@ -10,3 +10,4 @@ This site is deployed via GitHub Pages and accessible at [thecargarage.co](https
 
 Simply open `index.html` in your browser to view the site locally.
 
+
