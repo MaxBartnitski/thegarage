@@ -86,10 +86,96 @@
             <div class="cta-section">
                 <div class="status-badge">Coming Soon</div>
                 <p class="contact-text">Interested in early access?</p>
-                <a href="mailto:info@thecargarage.co" class="email-link">info@thecargarage.co</a>
+                <button onclick="openModal()" class="signup-button">Get Early Access</button>
             </div>
         </div>
     </div>
+
+    <!-- Email Signup Modal -->
+    <div id="signupModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title">Join The Garage</h2>
+            <p class="modal-subtitle">Get early access and exclusive updates</p>
+            
+            <form id="signupForm" action="https://docs.google.com/forms/d/e/1FAIpQLScCZOYV89Bmc9w8ajVY5Fm6CZv2kXhAsL1tlF2LwKY5-Mg6rQ/formResponse" method="POST" target="hidden_iframe" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name (Optional)</label>
+                    <input type="text" id="name" name="entry.1691051208" placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="entry.1885298778" placeholder="your@email.com" required>
+                </div>
+                
+                <button type="submit" class="submit-button">Sign Up for Updates</button>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3>Welcome to The Garage!</h3>
+                <p>You're on the list for early access.</p>
+            </div>
+        </div>
+    </div>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        function openModal() {
+            document.getElementById('signupModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('signupModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                document.getElementById('signupForm').reset();
+                document.getElementById('signupForm').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }, 300);
+        }
+
+        function closeModalOnBackdrop(event) {
+            if (event.target.id === 'signupModal') {
+                closeModal();
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                mode: 'no-cors'
+            }).then(() => {
+                form.style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                setTimeout(() => {
+                    closeModal();
+                }, 2000);
+            }).catch(() => {
+                form.style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                setTimeout(() => {
+                    closeModal();
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
 
