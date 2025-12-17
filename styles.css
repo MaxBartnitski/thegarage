@@ -562,6 +562,13 @@ body {
     color: var(--white);
 }
 
+.footer-email {
+    color: var(--gray-400) !important;
+    border-left: 1px solid var(--gray-700);
+    padding-left: 24px;
+    margin-left: 8px;
+}
+
 .footer-bottom {
     padding-top: 24px;
     display: flex;
