@@ -21,74 +21,169 @@
     </script>
 </head>
 <body>
-    <div class="background">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2940&auto=format&fit=crop" alt="Sports Car" class="hero-car">
-        <div class="overlay"></div>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="header-brand">
+                <div class="header-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <span class="header-name">THE GARAGE</span>
+            </a>
+            <nav class="header-nav">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <button onclick="openModal()" class="nav-cta">Join Waitlist</button>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <div class="content">
-            <div class="logo-section">
-                <h1 class="logo">THE GARAGE</h1>
-                <div class="logo-underline"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2940&auto=format&fit=crop" alt="Sports Car" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">THE GARAGE</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-tagline">Your Digital Automotive Hub</p>
+            <p class="hero-description">A centralized platform for car enthusiasts. Showcase your vehicles, discover unique collections, and connect with owners worldwide.</p>
+            <div class="hero-cta-group">
+                <button onclick="openModal()" class="btn-primary">Join the Waitlist</button>
+                <a href="#features" class="btn-secondary">Explore Features</a>
             </div>
+        </div>
+    </section>
 
-            <div class="tagline">
-                <p class="subtitle">Your Digital Automotive Hub</p>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What You Can Do</h2>
+                <p class="section-subtitle">Everything you need to manage, showcase, and explore automotive collections</p>
             </div>
-
-            <div class="cta-section">
-                <button onclick="openModal()" class="signup-button">Join the Garage</button>
-                <p class="contact-text">Be first in line when we launch</p>
-            </div>
-
-            <div class="features">
-                <div class="feature-item">
+            
+            <div class="features-grid">
+                <a href="#" class="feature-card" onclick="showComingSoon(event, 'Your Garage')">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
                     </div>
-                    <span>Your Garage</span>
-                </div>
-                <div class="feature-item">
+                    <h3 class="feature-title">Your Garage</h3>
+                    <p class="feature-description">Build and manage your personal vehicle collection. Track specs, maintenance history, and showcase your rides.</p>
+                    <span class="feature-cta">Coming Soon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <a href="#" class="feature-card" onclick="showComingSoon(event, 'Explore Garages')">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
                         </svg>
                     </div>
-                    <span>Explore Garages</span>
-                </div>
-                <div class="feature-item">
+                    <h3 class="feature-title">Explore Garages</h3>
+                    <p class="feature-description">Discover incredible collections from enthusiasts around the world. Find inspiration for your next build.</p>
+                    <span class="feature-cta">Coming Soon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <a href="#" class="feature-card" onclick="showComingSoon(event, 'Videos & Content')">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="23 7 16 12 23 17 23 7"></polygon>
                             <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                         </svg>
                     </div>
-                    <span>Videos & Content</span>
-                </div>
-                <div class="feature-item">
+                    <h3 class="feature-title">Videos & Content</h3>
+                    <p class="feature-description">Watch reviews, walkarounds, and exclusive content from the automotive community.</p>
+                    <span class="feature-cta">Coming Soon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <a href="#" class="feature-card" onclick="showComingSoon(event, 'Buy & Sell')">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="9" cy="21" r="1"></circle>
-                            <circle cx="20" cy="21" r="1"></circle>
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
-                    <span>Buy & Sell</span>
-                </div>
-            </div>
-
-            <div class="description-section">
-                <p class="description">A centralized platform for car enthusiasts. Showcase your vehicles, discover unique collections, connect with owners, and find your next dream car.</p>
+                    <h3 class="feature-title">Buy & Sell</h3>
+                    <p class="feature-description">Find your next dream car or connect with serious buyers. A marketplace built for enthusiasts.</p>
+                    <span class="feature-cta">Coming Soon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">Built for Enthusiasts,<br>By Enthusiasts</h2>
+                    <p class="about-description">The Garage is more than an app—it's a community. Whether you're a collector with a warehouse full of classics or someone dreaming of their first project car, this is your home.</p>
+                    <p class="about-description">We're building the platform we always wished existed. One place to document your builds, connect with like-minded owners, and celebrate the cars we love.</p>
+                    <button onclick="openModal()" class="btn-primary">Get Early Access</button>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2025</span>
+                        <span class="stat-label">Launch Year</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free to Join</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">All</span>
+                        <span class="stat-label">Makes Welcome</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Be First in Line</h2>
+            <p class="cta-subtitle">Join the waitlist and get exclusive early access when we launch.</p>
+            <button onclick="openModal()" class="btn-primary btn-large">Join the Waitlist</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <div class="footer-brand-text">
+                        <span class="footer-name">THE GARAGE</span>
+                        <span class="footer-tagline">Your Digital Automotive Hub</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#" onclick="openModal(); return false;">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 The Garage. All rights reserved.</p>
+                <p class="footer-owner">A product of Makoba Business LLC</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Email Signup Modal -->
     <div id="signupModal" class="modal" onclick="closeModalOnBackdrop(event)">
@@ -122,9 +217,45 @@
         </div>
     </div>
 
+    <!-- Coming Soon Toast -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         function openModal() {
             document.getElementById('signupModal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -169,6 +300,17 @@
             });
         }
 
+        function showComingSoon(event, feature) {
+            event.preventDefault();
+            const toast = document.getElementById('toast');
+            const message = document.getElementById('toastMessage');
+            message.textContent = `${feature} - Coming Soon!`;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
                 closeModal();
@@ -177,5 +319,3 @@
     </script>
 </body>
 </html>
-
-
